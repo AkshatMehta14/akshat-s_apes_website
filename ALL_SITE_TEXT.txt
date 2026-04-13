@@ -1,0 +1,633 @@
+================================================================================
+APES CARBON SITE — ALL EDITABLE TEXT
+================================================================================
+Use this file as your scratch pad. Lines in "boxes" (====) are section headers.
+You can use <strong>...</strong> in paragraphs where the live site shows bold.
+
+Sources: index.html (most copy) + app.js (tips, quiz, calculator messages, charts)
+
+================================================================================
+1 — BROWSER TAB & SEARCH SNIPPET
+================================================================================
+
+Page title (what appears in the browser tab):
+
+  APES Carbon Footprint Interactive Website
+
+Meta description (search engines / link previews):
+
+  Interactive APES site that calculates your carbon footprint, has earth system information, with charts, and a quiz at the bottom to gauge your understanding. 
+
+================================================================================
+2 — HEADER & NAVIGATION
+================================================================================
+
+Skip link (accessibility, usually hidden until focused):
+
+  Skip to content
+
+Logo — first part, then second part (styled differently on the site):
+
+  APES
+  Carbon
+
+Mobile menu button label:
+
+  Menu
+
+Nav links (in order):
+
+  Calculator
+  Tips
+  Examples
+  Earth Systems
+  Feedback
+  Data
+  APES Units
+  Quiz
+
+================================================================================
+3 — HERO (TOP OF PAGE)
+================================================================================
+
+Small line above the main headline (eyebrow):
+
+  AP Environmental Science
+
+Main headline (in HTML the word “Understand” is wrapped in italics):
+
+  Decrease your global footprint and learn how the planet works. 
+
+Intro paragraph under the headline:
+
+  This is my AP Environmental Science interactive website. It includes
+  everyhting required in the rubric. Please check it out and see the sections
+  bellow.
+
+Primary button:
+
+  Start calculating
+
+Secondary button:
+
+  See system links
+
+================================================================================
+4 — CARBON FOOTPRINT CALCULATOR
+================================================================================
+
+Section title:
+
+  Custom Carbon footprint calculator
+
+Section intro paragraph:
+
+  Generates a rough estimate in metric tons of CO₂ created per year. It is very
+  basic and only includes some of the most common sources of carbon emissions.
+
+Callout (Unit 7). First sentence is bold on the site; keep the <strong> tags
+if you want that styling:
+
+  <strong>Unit 7: Atmospheric pollution.</strong> Carbon dioxide is a greenhouse
+  gas. When we burn fossil fuels or participate in activities like that it takes carbon stored up into the group and releases it as emissions into the atmosphere. That extra CO₂
+  increases the amount of heat trapped into the atmosphere which heats up the
+  planet. It can have major consequences for the enviornment.
+
+Form labels:
+
+  Car travel (miles / week)
+  Electricity (kWh / month)
+  Or quick electricity slider
+
+After the electricity slider, the line shows a number plus this suffix:
+
+   kWh / month
+  (there is a leading space before "kWh" on the site)
+
+Accessibility text for the slider (screen readers):
+
+  Electricity usage slider kWh per month
+
+Diet section label:
+
+  Diet pattern
+
+Diet choices:
+
+  Meat-heavy
+  Balanced
+  Vegetarian
+
+Flights label:
+
+  Round-trip flights / year
+
+Buttons:
+
+  Estimate my footprint
+  Reset
+
+Results block — title and unit line (the number is filled in by JavaScript):
+
+  Your estimated footprint
+  tons CO₂e / year
+
+================================================================================
+5 — ACTION CHECKLIST (TIPS SECTION INTRO ONLY; CARDS ARE IN APP.JS BELOW)
+================================================================================
+
+Section title:
+
+  Action checklist
+
+Intro paragraph:
+
+  Your individual effort is not going to magically just end climate change and
+  global warming but if everyone starts to come together then all of that
+  effort will add up and make a difference. Check out the cards bellow on some
+  tips and strategies that you can implement into your everyday life to reduce
+  your carbon footprint.
+
+================================================================================
+6 — REAL-WORLD EXAMPLES
+================================================================================
+
+Section title:
+
+  Examples from the real world
+
+Section intro:
+
+  Even more impactful than indidual choices are governmental policies,
+  regulations, and laws. These three examples/cards shows how a country or group
+  of people can change their carbon footprint and emission curve by creating
+  sustainable plans and really following them.
+
+--- Example A — title:
+
+  Denmark and wind electricity
+
+--- Example A — body (bold "half" on site):
+
+  Denmark has built wind capacity becuase of the oil shocks of the 1970s. Today
+  this wind infustructure creates about <strong>half</strong> of their
+  electricity. That didn't happen in one night and took years of planning and
+  implementation. It took port upgrades, undersea cables, community buy-in, and
+  a lot of engineering to keep the lights on when the breeze drops. Simply put
+  countries can create sustainable plans for renewable energy and stick to
+  them. It is a matter of how consistent and committed you are.
+
+--- Example B — title:
+
+  Costa Rica, renewables, and biodiversity
+
+--- Example B — body:
+
+  Costa Rica famously runs much of its grid on <strong>roughly 98%
+  renewable</strong> electricity for a long time, leaning on hydro,
+  geothermal, wind, and solar. Hydro has cons during droughts so its not like
+  their solutions are completely perfect and foolproof. However, pairing a
+  cleaner grid with aggressive forest protection matters for carbon stored in
+  biomass and for species that need intact habitat.
+
+--- Example C — title:
+
+  California and vehicle emissions
+
+--- Example C — body:
+
+  California uses <strong>strict tailpipe and fuel rules</strong> for decades
+  under federal waiver authority. Because California’s market is huge,
+  automakers often build to that bar for the whole country. Cleaner cars cut
+  local air pollution (ozone precursors, particulates) and, over time, CO₂ per
+  mile as efficiency improves and electrics grow. For class, tie this to Unit 7
+  chemistry in the troposphere, not only to climate graphs.
+
+================================================================================
+7 — EARTH SYSTEM INTERACTIONS
+================================================================================
+
+Section title:
+
+  Earth system ands their interactions
+
+Section intro:
+
+  Lets start with the amosphere and ocean. They trade energy and chemicals all the time, open the pannels bellow to read more about how this occurs and what it looks like.
+
+Callout (Unit 1):
+
+  <strong>Unit 1: Earth systems.</strong> Matter and energy move between the
+  atmosphere, hydrosphere, geosphere, and biosphere. Dependent on the climate, this movement speedsup, slows down, reverses etc. 
+
+--- Panel 1 — accordion button title:
+
+  Atmosphere and ocean
+
+--- Panel 1 — main paragraph:
+
+  The ocean is a giant buffer. Think of it as a large sponge that accumulates the heat and carbon emissions that we produce or are on the planet. 
+
+--- Panel 1 — bullet 1:
+
+  <strong>Ocean warming have the potential to move crucial fisheries that people depdend on and lead to massive algea blooms that can disrupt ecosystems. This currents are not stable. 
+
+--- Panel 1 — bullet 2:
+
+  When CO₂ dissolves, seawater becomes more acidic (lower pH). That makes it
+  harder for some shell builders to form calcium structures.
+
+--- Panel 1 — bullet 3:
+
+  Warmer water and a bunch of other stressers can cause coral reefs to bleech and lose the algea that helps them survice. Once again this can also collapse ecosystems. 
+
+--- Panel 2 — accordion button title:
+
+  Climate and biosphere
+
+--- Panel 2 — main paragraph:
+
+  Spieces and animals all have a zone of compfort for their living conditions like temprature and moisture. Climate change can disrupt the living conditions of animals faster than they can adapt which kills them off. 
+
+--- Panel 2 — bullet 1:
+
+  <strong>Range shifts</strong> show up when species move poleward, uphill, or
+  deeper to stay in tolerable conditions. Beucase plants and animals do not all move in the same ways or speed curical dynamics like predator or prey relationships fall out of ballance. 
+
+--- Panel 2 — bullet 2:
+
+  <strong>Extinction risk</strong> increases a lot for spieces that are specialists because they reliey on certain resources that may be lost from an enviornm,ent. 
+
+--- Panel 2 — bullet 3:
+
+  Phenology shifts too: earlier springs, mismatched migrations, and timing bugs
+  that ripple through food webs.
+
+--- Panel 3 — accordion button title:
+
+  Climate and soil
+
+--- Panel 3 — main paragraph:
+
+  Soil is alive and easy to damage. When rainfall gets weirder (long dry spells,
+  then violent storms), soil moisture swings stress plants and microbes that
+  hold the ground together.
+
+--- Panel 3 — bullet 1:
+
+  <strong>Drought</strong> weakens vegetation cover, so bare soil bakes,
+  organic matter drops, and dust storms become more likely in vulnerable
+  regions.
+
+--- Panel 3 — bullet 2:
+
+  <strong>Erosion</strong> spikes when heavy rain hits bare slopes or compacted
+  farm roads, sending sediment into streams and burying downstream habitat.
+
+--- Panel 3 — bullet 3:
+
+  <strong>Crop yields</strong> suffer when heat and water stress pile up during
+  sensitive growth stages. That is why climate and agriculture show up
+  together in news about food prices and insurance.
+
+================================================================================
+8 — ICE ALBEDO FEEDBACK
+================================================================================
+
+Section title:
+
+  Ice albedo feedback is a positive loop
+
+Section intro:
+
+  A positive loop means that the loop is self reinforcing. 
+
+Numbered steps (numbers 1–5 are fixed in layout; only the text after each is
+editable on the site — edit the full line meaning here):
+
+  Step 1 text:
+  Sea ice and seasonal snow shrink as the region warms.
+
+  Step 2 text:
+  White ice and snow reflect a lot of sunlight back to space. Open water and
+  bare ground are darker.
+
+  Step 3 text:
+  Albedo drops, meaning less reflection and more absorption of solar energy at
+  the surface.
+
+  Step 4 text:
+  That extra absorbed energy becomes heat, which melts more ice and keeps the
+  cycle going.
+
+  Step 5 text:
+  You end up with more warming and more melting until weather patterns,
+  geography, or winter darkness finally slow the loop down.
+
+Closing note paragraph:
+
+Make sure you understand this it is really important. 
+
+Second callout (Unit 1):
+
+  <strong>Unit 1: Earth systems.</strong> Feedback loops tweak both the carbon
+  cycle and Earth’s energy balance. Albedo shifts near the poles are one of the
+  faster levers on how much sunlight the planet keeps.
+
+================================================================================
+9 — OBSERVED TRENDS (GRAPHS SECTION)
+================================================================================
+
+Section title:
+
+  Observed trends
+
+Section intro:
+
+  The trends bellow show how concertation and temprature climb in relation to each other in the modern era. 
+
+--- Subheading + intro — Why CO₂ rising?
+
+  Why is CO₂ rising?
+
+  Carbon dioxide mixes through the whole atmosphere, so a single monitoring
+  station in Hawaii can still tell a global story when scientists account for
+  seasons and averaging. The climb you is mainly created by human activities and not the volacano. 
+
+Bullet 1:
+
+  <strong>Fossil fuel burning.</strong> Coal, oil, and gas hold ancient carbon.
+  Power plants, factories, ships, planes, and cars oxidize that carbon to CO₂
+  fast compared with geologic time.
+
+Bullet 2:
+
+  <strong>Deforestation and land conversion.</strong> Forests store carbon in
+  wood and soil. When we clear land and burn residue, some of that carbon returns
+  to the air. Even without fire, a shorter rotation of crops usually stores less
+  carbon than old growth.
+
+Bullet 3:
+
+  <strong>Industrial processes.</strong> Making cement releases CO₂ from
+  limestone chemistry. Steel and chemicals often need high heat, historically
+  from fossil fuels.
+
+--- Subheading + intro — Why temperatures rising?
+
+  Why are temperatures rising?
+
+  Temperature bounces year to year because of El Niño, volcanoes, and other
+  noise, which is why scientists emphasize trends over decades, not one hot
+  afternoon.
+
+Bullet 1:
+
+  <strong>Greenhouse gases and the radiation budget.</strong> Earth absorbs
+  sunlight and emits infrared. GHGs absorb some of that outgoing infrared and send
+  energy back toward the surface. More GHGs tilt the balance toward warming until
+  oceans and ice sheets adjust (which takes time).
+
+Bullet 2:
+
+  <strong>CO₂ is the long slow knob.</strong> It stays in the climate system for
+  a long time compared with methane, so even if methane cuts matter a lot near
+  term, CO₂ is still the main cumulative driver of the warming we have already
+  baked in.
+
+Chart card titles:
+
+  CO₂ concentration over time
+  Global temperature anomaly
+
+Chart accessibility labels (screen readers):
+
+  Line chart of CO2 ppm by year
+  Line chart of temperature anomaly by year
+
+
+================================================================================
+11 — QUIZ (HTML SHELL ONLY)
+================================================================================
+
+Section title:
+
+  Knowledge check
+
+Section intro:
+
+  Seven questions, mostly reading comprehension for how scientists talk about
+  systems. Pick the best answer, hit score, and read the feedback even if you
+  aced it. Wrong answers are useful data about what to reread.
+
+Score box title:
+
+  Your score
+
+Try again button:
+
+  Try again
+
+
+================================================================================
+13 — JAVASCRIPT (app.js) — TIP CARDS (11 CARDS: TITLE + DESCRIPTION EACH)
+================================================================================
+
+Tip 1 — title:
+  Use public transportation
+Tip 1 — description:
+  If everyone uses public transportation then less carbon is produced beucase less people are using indidual vehicles. The carbon created per person in transport decreases and is shared. 
+
+Tip 2 — title:
+  Reduce meat consumption
+Tip 2 — description:
+  The production of meat in the agricultural industry creates a lot of carbon emissions. By switching to a vegitarian or vegan diet you will decrease the demand for meat which will decrease the amount of resources allocated to prodcucing meat. This will result in fewer emissions. 
+
+Tip 3 — title:
+  Switch to renewable energy
+Tip 3 — description:
+  Renewable energies prevent the burning of coal and other fossil fuels which releases carbon emissions. Instead by using technologies like solar pannels for your home you can decrease the amount of energy you use from combustion which will decrease the carbon emissions you are responsible for. 
+
+Tip 4 — title:
+  Reduce electricity usage
+Tip 4 — description:
+  You can try using less of your devices or appliances which will decrease your net electricity consumption. Another thing you can do is unplug your devices when they are not being using to avoid phantom load. 
+
+Tip 5 — title:
+  Buy energy-efficient appliances
+Tip 5 — description:
+  Stores spesifically sell appliences that are more energy efficent. 
+
+Tip 6 — title:
+  Reduce water waste
+Tip 6 — description:
+  It takes power to pump, heat, and treat water which can result in a larger footprint for you. So instead try using less water and reduce the amount that you waste. For example while brushing or washing the dishes turn the sink off when you are not using it. 
+
+Tip 7 — title:
+  Compost food waste
+Tip 7 — description:
+  Scraps can rot in landfills and burp out methane and other emissions that will impact the information. Instead if you compost stuff like your food waste it can be used in agriculture or other stuff. 
+
+Tip 8 — title:
+  Recycle properly
+Tip 8 — description:
+  Recycle your stuff properly. For instance pizza boxes shouldn't have oil in them. If you don't ahere to the recycling rules or don't know about them then you might do it wrong and your stuff will end up in a land fill. 
+
+Tip 9 — title:
+  Reduce fast fashion purchases
+Tip 9 — description:
+  Fast fashion uses materials like polyester and have processes that impact the enviornment poorly. Instead use clothes and cloths that last longer and are more sustainable like cotton. 
+
+Tip 10 — title:
+  Use reusable products
+Tip 10 — description:
+  Don't use single use items like plastic bags. Instead use or purchase items that you dont have to throw away and can reuse. For example you can buy metal water bottles or toat bags. 
+
+Tip 11 — title:
+  Carpool
+Tip 11 — description:
+  Much like public transportation you can try carpooling with friends or other people to split up the emissions you created or are responsible for. 
+
+================================================================================
+14 — JAVASCRIPT — CALCULATOR RESULT TIERS (AFTER USER CLICKS “ESTIMATE”)
+================================================================================
+
+If total is below 10 (simple model) — label line:
+  Below average for this simple model
+If total is below 10 — hint paragraph:
+  Nice work in the toy calculator world. Keep the same curiosity when you look
+  at real inventories, because flight class, car type, and local grid mix all
+  move the needle.
+
+If total is 10 through 16 — label line:
+  About average for this simple model
+If total is 10 through 16 — hint paragraph:
+  You landed where a lot of back of the envelope U.S. style totals land. If you
+  want the biggest cuts on paper, flights and car miles are usually the loud
+  knobs, then home electricity.
+
+If total is above 16 — label line:
+  Above average for this simple model
+If total is above 16 — hint paragraph:
+  High numbers here usually mean lots of driving, lots of flying, or a fossil
+  heavy grid feeding a big house. Pick one area to study for a week and track
+  what is actually fixable in your life, not what the internet yells about.
+
+================================================================================
+15 — JAVASCRIPT — QUIZ QUESTIONS & ANSWERS (CORRECT INDEX: 0 = A, 1 = B, …)
+================================================================================
+
+Submit button label:
+
+  Score my quiz
+
+If score is at least 5 out of 7 — message:
+  You are in solid shape. Keep connecting vocabulary to mechanisms, not just
+  buzzwords.
+
+If score is below 5 out of 7 — message:
+  Totally normal on a first pass. Reread the atmosphere ocean panel and the
+  graph blurbs, then try again without rushing.
+
+--- Question 1 (correct answer: B, index 1)
+
+  Question:
+  Which choice typically adds the most CO₂e per passenger-mile for long
+  distances?
+
+  A — Intercity rail
+  B — Commercial aviation
+  C — Carpool in a hybrid
+  D — City bus
+
+--- Question 2 (correct: C, index 2)
+
+  Question:
+  What household change often reduces carbon footprint the most in fossil-heavy
+  grids?
+
+  A — Switching to LEDs only
+  B — Lowering thermostat 1°F once
+  C — Using clean electricity + major efficiency
+  D — Recycling aluminum occasionally
+
+--- Question 3 (correct: B, index 1)
+
+  Question:
+  Globally, which sector is commonly the largest share of anthropogenic CO₂
+  emissions?
+
+  A — Residential lighting
+  B — Energy and heat (electricity, fuels, heavy industry)
+  C — Music streaming
+  D — Office paper
+
+--- Question 4 (correct: A, index 0)
+
+  Question:
+  When oceans absorb excess atmospheric CO₂, a major consequence is:
+
+  A — Ocean acidification
+  B — Ozone hole expansion over cities
+  C — SO₂ smog in deserts
+  D — Indoor radon spikes
+
+--- Question 5 (correct: B, index 1)
+
+  Question:
+  The ice albedo feedback loop is best described as:
+
+  A — Negative feedback that stabilizes climate
+  B — Positive feedback that amplifies warming
+  C — A nutrient cycle in soil
+  D — A predator prey oscillation
+
+--- Question 6 (correct: C, index 2)
+
+  Question:
+  Which gas is a long-lived greenhouse gas driving most warming since
+  preindustrial times?
+
+  A — Radon
+  B — Argon
+  C — Carbon dioxide (CO₂)
+  D — Neon
+
+--- Question 7 (correct: B, index 1)
+
+  Question:
+  Deforestation changes the fast carbon cycle mainly by:
+
+  A — Increasing stratospheric ozone
+  B — Releasing stored carbon and reducing uptake
+  C — Eliminating soil nitrogen entirely
+  D — Stopping ocean currents
+
+================================================================================
+16 — JAVASCRIPT — CHART LABELS (TOOLTIPS / AXES)
+================================================================================
+
+CO₂ chart — dataset name (tooltip):
+
+  CO₂ (ppm)
+
+CO₂ chart — vertical axis title:
+
+  ppm
+
+Both charts — horizontal axis title:
+
+  Year
+
+Temperature chart — dataset name:
+
+  °C anomaly
+
+Temperature chart — vertical axis title:
+
+  °C vs baseline
+
+================================================================================
+END OF FILE — When you want changes in the live site, paste edited chunks back
+into index.html and app.js (or ask your editor / assistant to apply them).
+================================================================================

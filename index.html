@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Interactive APES site that calculates your carbon footprint, has earth system information, with charts, and a quiz at the bottom to gauge your understanding." />
+  <title>APES Carbon Footprint Interactive Website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="#">APES<span>Carbon</span></a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <a href="#calculator">Calculator</a>
+        <a href="#tips">Tips</a>
+        <a href="#examples">Examples</a>
+        <a href="#interactions">Earth Systems</a>
+        <a href="#feedback-loop">Feedback</a>
+        <a href="#graphs">Data</a>
+        <a href="#apes">APES Units</a>
+        <a href="#quiz">Quiz</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="eyebrow">AP Environmental Science</p>
+        <h1>Decrease your global footprint and learn how the planet works.</h1>
+        <p class="lead">
+          This is my AP Environmental Science interactive website. It includes everyhting required in the rubric. Please check it out and see the sections bellow.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#calculator">Start calculating</a>
+          <a class="btn btn-ghost" href="#interactions">See system links</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-calculator" id="calculator">
+      <div class="container">
+        <header class="section-head">
+          <h2>Custom Carbon footprint calculator</h2>
+          <p>
+            Generates a rough estimate in metric tons of CO₂ created per year. It is very basic and only includes some of the most common sources of carbon emissions.
+          </p>
+        </header>
+
+        <div class="apes-callout" role="note">
+          <strong>Unit 7: Atmospheric pollution.</strong> Carbon dioxide is a greenhouse gas. When we burn fossil fuels or participate in activities like that it takes carbon stored up into the group and releases it as emissions into the atmosphere. That extra CO₂ increases the amount of heat trapped into the atmosphere which heats up the planet. It can have major consequences for the enviornment.
+        </div>
+
+        <form class="calc-form" id="footprint-form" novalidate>
+          <div class="calc-grid">
+            <label class="field">
+              <span>Car travel (miles / week)</span>
+              <input type="number" name="miles" id="miles" min="0" step="1" value="80" required />
+            </label>
+            <label class="field">
+              <span>Electricity (kWh / month)</span>
+              <input type="number" name="kwh" id="kwh" min="0" step="10" value="900" required />
+            </label>
+            <div class="field field-slider">
+              <span>Or quick electricity slider</span>
+              <input type="range" id="kwh-slider" min="0" max="2000" step="10" value="900" aria-label="Electricity usage slider kWh per month" />
+              <div class="slider-meta"><span id="kwh-slider-label">900</span> kWh / month</div>
+            </div>
+            <label class="field">
+              <span>Diet pattern</span>
+              <select name="diet" id="diet">
+                <option value="meat">Meat-heavy</option>
+                <option value="balanced" selected>Balanced</option>
+                <option value="veg">Vegetarian</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Round-trip flights / year</span>
+              <input type="number" name="flights" id="flights" min="0" step="1" value="1" required />
+            </label>
+          </div>
+          <div class="calc-actions">
+            <button type="submit" class="btn btn-primary">Estimate my footprint</button>
+            <button type="reset" class="btn btn-ghost" id="calc-reset">Reset</button>
+          </div>
+        </form>
+
+        <div class="calc-result card-reveal" id="calc-result" hidden>
+          <h3>Your estimated footprint</h3>
+          <p class="result-big"><span id="result-tons">...</span> <span class="unit">tons CO₂e / year</span></p>
+          <p class="result-tier" id="result-tier"></p>
+          <p class="result-hint" id="result-hint"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tips" id="tips">
+      <div class="container">
+        <header class="section-head">
+          <h2>Action checklist</h2>
+          <p>
+            Your individual effort is not going to magically just end climate change and global warming but if everyone starts to come together then all of that effort will add up and make a difference. Check out the cards bellow on some tips and strategies that you can implement into your everyday life to reduce your carbon footprint.
+          </p>
+        </header>
+        <div class="tips-grid" id="tips-grid"></div>
+      </div>
+    </section>
+
+    <section class="section section-examples" id="examples">
+      <div class="container">
+        <header class="section-head">
+          <h2>Examples from the real world</h2>
+          <p>
+            Even more impactful than indidual choices are governmental policies, regulations, and laws. These three examples/cards shows how a country or group of people can change their carbon footprint and emission curve by creating sustainable plans and really following them.
+          </p>
+        </header>
+        <div class="example-cards">
+          <article class="example-card">
+            <h3>Denmark and wind electricity</h3>
+            <p>
+              Denmark has built wind capacity becuase of the oil shocks of the 1970s. Today this wind infustructure creates about <strong>half</strong> of their electricity. That didn't happen in one night and took years of planning and implementation. It took port upgrades, undersea cables, community buy-in, and a lot of engineering to keep the lights on when the breeze drops. Simply put countries can create sustainable plans for renewable energy and stick to them. It is a matter of how consistent and committed you are. 
+            </p>
+          </article>
+          <article class="example-card">
+            <h3>Costa Rica, renewables, and biodiversity</h3>
+            <p>
+              Costa Rica famously runs much of its grid on <strong>roughly 98% renewable</strong> electricity for a long time, leaning on hydro, geothermal, wind, and solar. Hydro has cons during droughts so its not like their solutions are completely perfect and foolproof. However, pairing a cleaner grid with aggressive forest protection matters for carbon stored in biomass and for species that need intact habitat. 
+            </p>
+          </article>
+          <article class="example-card">
+            <h3>California and vehicle emissions</h3>
+            <p>
+              California uses <strong>strict tailpipe and fuel rules</strong> for decades under federal waiver authority. Because California’s market is huge, automakers often build to that bar for the whole country. Cleaner cars cut local air pollution (ozone precursors, particulates) and, over time, CO₂ per mile as efficiency improves and electrics grow. For class, tie this to Unit 7 chemistry in the troposphere, not only to climate graphs.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-interactions" id="interactions">
+      <div class="container">
+        <header class="section-head">
+          <h2>Earth system ands their interactions</h2>
+          <p>
+            Lets start with the amosphere and ocean. They trade energy and chemicals all the time, open the pannels bellow to read more about how this occurs and what it looks like.
+          </p>
+        </header>
+
+        <div class="apes-callout" role="note">
+          <strong>Unit 1: Earth systems.</strong> Matter and energy move between the atmosphere, hydrosphere, geosphere, and biosphere. Dependent on the climate, this movement speedsup, slows down, reverses etc.
+        </div>
+
+        <div class="accordion" id="system-accordion">
+          <div class="accordion-item is-open">
+            <button type="button" class="accordion-trigger" aria-expanded="true" data-acc="1">
+              Atmosphere and ocean
+            </button>
+            <div class="accordion-panel" id="acc-panel-1">
+              <p>
+                The ocean is a giant buffer. Think of it as a large sponge that accumulates the heat and carbon emissions that we produce or are on the planet.
+              </p>
+              <ul>
+                <li><strong>Ocean warming have the potential to move crucial fisheries that people depdend on and lead to massive algea blooms that can disrupt ecosystems. This currents are not stable.</strong></li>
+                <li>When CO₂ dissolves, seawater becomes more acidic (lower pH). That makes it harder for some shell builders to form calcium structures.</li>
+                <li>Warmer water and a bunch of other stressers can cause coral reefs to bleech and lose the algea that helps them survice. Once again this can also collapse ecosystems.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button type="button" class="accordion-trigger" aria-expanded="false" data-acc="2">
+              Climate and biosphere
+            </button>
+            <div class="accordion-panel" id="acc-panel-2" hidden>
+              <p>
+                Spieces and animals all have a zone of compfort for their living conditions like temprature and moisture. Climate change can disrupt the living conditions of animals faster than they can adapt which kills them off.
+              </p>
+              <ul>
+                <li><strong>Range shifts</strong> show up when species move poleward, uphill, or deeper to stay in tolerable conditions. Beucase plants and animals do not all move in the same ways or speed curical dynamics like predator or prey relationships fall out of ballance.</li>
+                <li><strong>Extinction risk</strong> increases a lot for spieces that are specialists because they reliey on certain resources that may be lost from an enviornm,ent.</li>
+                <li>Phenology shifts too: earlier springs, mismatched migrations, and timing bugs that ripple through food webs.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button type="button" class="accordion-trigger" aria-expanded="false" data-acc="3">
+              Climate and soil
+            </button>
+            <div class="accordion-panel" id="acc-panel-3" hidden>
+              <p>
+                Soil is alive and easy to damage. When rainfall gets weirder (long dry spells, then violent storms), soil moisture swings stress plants and microbes that hold the ground together.
+              </p>
+              <ul>
+                <li><strong>Drought</strong> weakens vegetation cover, so bare soil bakes, organic matter drops, and dust storms become more likely in vulnerable regions.</li>
+                <li><strong>Erosion</strong> spikes when heavy rain hits bare slopes or compacted farm roads, sending sediment into streams and burying downstream habitat.</li>
+                <li><strong>Crop yields</strong> suffer when heat and water stress pile up during sensitive growth stages. That is why climate and agriculture show up together in news about food prices and insurance.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-feedback" id="feedback-loop">
+      <div class="container">
+        <header class="section-head">
+          <h2>Ice albedo feedback is a positive loop</h2>
+          <p>
+            A positive loop means that the loop is self reinforcing.
+          </p>
+        </header>
+        <div class="feedback-flow" aria-label="Ice albedo feedback sequence">
+          <div class="fb-step"><span>1</span> Sea ice and seasonal snow shrink as the region warms.</div>
+          <div class="fb-step"><span>2</span> White ice and snow reflect a lot of sunlight back to space. Open water and bare ground are darker.</div>
+          <div class="fb-step"><span>3</span> Albedo drops, meaning less reflection and more absorption of solar energy at the surface.</div>
+          <div class="fb-step"><span>4</span> That extra absorbed energy becomes heat, which melts more ice and keeps the cycle going.</div>
+          <div class="fb-step"><span>5</span> You end up with more warming and more melting until weather patterns, geography, or winter darkness finally slow the loop down.</div>
+        </div>
+        <p class="feedback-note">
+          Make sure you understand this it is really important.
+        </p>
+
+        <div class="apes-callout" role="note">
+          <strong>Unit 1: Earth systems.</strong> Feedback loops tweak both the carbon cycle and Earth’s energy balance. Albedo shifts near the poles are one of the faster levers on how much sunlight the planet keeps.
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-graphs" id="graphs">
+      <div class="container">
+        <header class="section-head">
+          <h2>Observed trends</h2>
+          <p>
+            The trends bellow show how concertation and temprature climb in relation to each other in the modern era.
+          </p>
+        </header>
+
+        <div class="graph-explain">
+          <div class="graph-explain-col">
+            <h3>Why is CO₂ rising?</h3>
+            <p>
+              Carbon dioxide mixes through the whole atmosphere, so a single monitoring station in Hawaii can still tell a global story when scientists account for seasons and averaging. The climb you is mainly created by human activities and not the volacano.
+            </p>
+            <ul>
+              <li><strong>Fossil fuel burning.</strong> Coal, oil, and gas hold ancient carbon. Power plants, factories, ships, planes, and cars oxidize that carbon to CO₂ fast compared with geologic time.</li>
+              <li><strong>Deforestation and land conversion.</strong> Forests store carbon in wood and soil. When we clear land and burn residue, some of that carbon returns to the air. Even without fire, a shorter rotation of crops usually stores less carbon than old growth.</li>
+              <li><strong>Industrial processes.</strong> Making cement releases CO₂ from limestone chemistry. Steel and chemicals often need high heat, historically from fossil fuels.</li>
+            </ul>
+          </div>
+          <div class="graph-explain-col">
+            <h3>Why are temperatures rising?</h3>
+            <p>
+              Temperature bounces year to year because of El Niño, volcanoes, and other noise, which is why scientists emphasize trends over decades, not one hot afternoon.
+            </p>
+            <ul>
+              <li><strong>Greenhouse gases and the radiation budget.</strong> Earth absorbs sunlight and emits infrared. GHGs absorb some of that outgoing infrared and send energy back toward the surface. More GHGs tilt the balance toward warming until oceans and ice sheets adjust (which takes time).</li>
+              <li><strong>CO₂ is the long slow knob.</strong> It stays in the climate system for a long time compared with methane, so even if methane cuts matter a lot near term, CO₂ is still the main cumulative driver of the warming we have already baked in.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="charts-grid">
+          <div class="chart-card">
+            <h3>CO₂ concentration over time</h3>
+            <canvas id="chart-co2" height="220" aria-label="Line chart of CO2 ppm by year"></canvas>
+          </div>
+          <div class="chart-card">
+            <h3>Global temperature anomaly</h3>
+            <canvas id="chart-temp" height="220" aria-label="Line chart of temperature anomaly by year"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-apes" id="apes">
+      <div class="container">
+        <header class="section-head">
+          <h2>APES unit map</h2>
+          <p>
+            If your teacher wants you to justify this site in a lab writeup, borrow language from the bullets below. Each unit shows up somewhere on the page on purpose, not as decoration.
+          </p>
+        </header>
+        <div class="unit-grid">
+          <article class="unit-card">
+            <h3>Unit 1: Earth systems</h3>
+            <p>
+              You practiced the carbon cycle in story form: fossil fuels and land use push carbon into the atmosphere, oceans and forests pull some back, and feedbacks like ice albedo or ocean heat uptake change the speed of the response. FRQ tip: name reservoirs, name processes, name a feedback, then add one real consequence people can feel.
+            </p>
+          </article>
+          <article class="unit-card">
+            <h3>Unit 2: Ecosystems</h3>
+            <p>
+              Range shifts, phenology, and services such as pollination show up when climate moves faster than communities can reorganize. The biosphere section above is basically review for “how would you explain this to a neighbor who only reads headlines.”
+            </p>
+          </article>
+          <article class="unit-card">
+            <h3>Unit 7: Atmospheric pollution</h3>
+            <p>
+              CO₂ is invisible, but it still counts as a pollutant when we talk about radiative forcing and ocean chemistry. Tailpipe rules in California are a nice bridge to ozone precursors and particulates, not only to CO₂ per mile.
+            </p>
+          </article>
+          <article class="unit-card optional">
+            <h3>Unit 5: Agriculture (optional)</h3>
+            <p>
+              Drought, soil organic matter, erosion, and yield swings are the farm belt version of the same climate story. If you extend this project, a short paragraph on cover crops or no till would fit naturally here.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-quiz" id="quiz">
+      <div class="container">
+        <header class="section-head">
+          <h2>Knowledge check</h2>
+          <p>
+            Seven questions, mostly reading comprehension for how scientists talk about systems. Pick the best answer, hit score, and read the feedback even if you aced it. Wrong answers are useful data about what to reread.
+          </p>
+        </header>
+        <form class="quiz-form" id="quiz-form"></form>
+        <div class="quiz-result card-reveal" id="quiz-result" hidden>
+          <h3>Your score</h3>
+          <p class="result-big"><span id="quiz-score">0</span> / <span id="quiz-total">7</span></p>
+          <p class="result-tier" id="quiz-message"></p>
+          <button type="button" class="btn btn-primary" id="quiz-retry">Try again</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>
+        Built for APES practice. The calculator uses rounded coefficients so the numbers feel plausible in class; if you are writing a research paper, pull factors from government inventories or peer reviewed sources instead.
+      </p>
+      <a class="footer-top" href="#top">Back to top</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
